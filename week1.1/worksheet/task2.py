@@ -6,6 +6,10 @@ Name:
 
 name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
+amount = input.int("How much do you want to save every month? :")
+end_year =amount * 12
+print("The amount you will have saved by the end of the year is £" , end_year)
+
 
 # Ask the user to input an amount they want to save every month - this should be an integer.
 # Validate that they have entered an integer.
