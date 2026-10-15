@@ -1,18 +1,15 @@
 # Worksheet 1.2: Task 2 Solution
-
-numbers=[]
-x = float(input("Please enter a float value"))
-numbers.append[x]
-
-
-
-
+import sys
+import util
 
 from util import read_numbers
+numbers = read_numbers()
+print(numbers)
 
-  numbers = read_numbers()
+numbers.sort()
+print(numbers)
 
-
-
-
+minimum = min(numbers)
+maximum = max(numbers)
+mean = (sum(numbers))/
 
