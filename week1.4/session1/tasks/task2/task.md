@@ -1,10 +1,6 @@
 
-# set.intersection() method
+int_set = setA.intersection(setB)
 
-Look up documentation on the 'intersection()' method
-- how is the method described?  
-- what are the inputs?
-- what is the output?
-- think about the description of the data and also the type
-
-Write a small program to test the method
+#Purpose - to return the intersection of 2 sets i.e. A /\ B
+#Input - two sets, A and B
+#Output - A new set containing the elements that appear in both A and B

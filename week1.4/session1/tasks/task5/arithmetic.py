@@ -4,28 +4,31 @@
 # and one for getting user inputs. Please inspect the code and then
 # complete the code for case 1 to case 4.
 
-
+#------------------------------------------------------------------
+#FUNCTION DIRECTORY:
 def addition(num1, num2):
+    """ adds together 2 given numbers"""
     return num1 + num2
 
-
 def subtraction(num1, num2):
+    """subtracts one given number from another"""
     return num1 - num2
 
-
 def multiplication(num1, num2):
+    """Multiplies 2 givem numbers together"""
     return num1 * num2
 
-
 def division(num1, num2):
+    """
+    Divides one given number by another
+    Returns an error if this is not possible
+    """
     if num2 == 0:
         return "Error: cannot divide by zero"
     else:
         return num1 / num2
 
-
 def run_program():
-
     # Ask user for two numbers
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
@@ -39,8 +42,15 @@ def run_program():
     operation = int(input("Enter your choice (1-4): "))
 
     match operation:
+    """
+    Asks user to enter their choice of which operation to perform
+    Performs this operation with the given numbers
+    Returns the output of this operation
+    """
         case 1:
-            result = None    # complete this line of code
+            result = None 
+            numbers = int(input("Please enter the numbers you would like to perform this operation with: "))
+            result = addition(numbers)   # complete this line of code
             print(f"The result of addition is: {result}")
         case 2:
             result = None    # complete this line of code
@@ -54,7 +64,8 @@ def run_program():
         case _:
             print("Undefined operation")
 
-
+#------------------------------------------------------------------
+#IMPLEMENTATION:
 run_program()
 
 

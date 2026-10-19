@@ -1,10 +1,6 @@
 
-# input() function
+reply=input("Tell me something:")
 
-Look up documentation on the 'input()' function
-- how is the function described?  
-- what are the inputs?
-- what is the output?
-- think about the description of the data and also the type
-
-Write a small program to test the function
+#Purpose - Reads a line from input, converts to a string, and returns that
+#Input - Text written by user
+#Output - Text written converted into a string
