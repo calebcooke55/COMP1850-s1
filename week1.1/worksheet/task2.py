@@ -8,8 +8,8 @@ import sys
 
 name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
-amount = int(input("How much do you want to save every month? :"))
 try:
+    amount = int(input("How much do you want to save every month? :"))
     end_year = amount * 12
     print(f"The amount you will have saved by the end of the year is £{end_year:.2f}")
     with_interest = end_year*1.008
