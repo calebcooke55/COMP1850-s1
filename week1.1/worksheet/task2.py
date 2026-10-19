@@ -15,7 +15,7 @@ try:
     with_interest = end_year*1.008
     print(f"The total amount of money including interest will be £{with_interest:.2f}")
 except:
-    sys.exit("Invalid amount")
+    sys.exit("Error: Invalid amount")
 
 
 # Ask the user to input an amount they want to save every month - this should be an integer.
