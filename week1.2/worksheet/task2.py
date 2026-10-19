@@ -2,6 +2,7 @@
 import sys
 import util
 
+#FUNCTION DIRECTORY
 def median(numbers):
     length = len(numbers)
     if length%2 == 0:
@@ -9,28 +10,25 @@ def median(numbers):
         final2 = numbers[(length//2)-1]
         final =  (final1+final2)/2
     else:
-        final = numbers(length//2)
+        final = numbers[length//2]
     return(final)
 
-from util import read_numbers
-numbers = read_numbers()
-numbers.sort()
-
-minimum = min(numbers)
-maximum = max(numbers)
-mean = (sum(numbers))/(len(numbers))
-median_r = median(numbers)
-
-print("Minimum =", minimum)
-print("Maximum =", maximum)
-print("Mean =", mean)
-print("Median =", median_r)
+#FUNCTIONAL CODE
+try:
+    from util import read_numbers
+    numbers = read_numbers()
+    numbers.sort()
 
 
-def med():
-    length = len(numbers)
-    if length%2 == 0:
-        final = ((numbers(length//2-1) + numbers(length//2))/2)
-    else:
-        final = numbers(length//2)
-    return(final)
+    minimum = min(numbers)
+    maximum = max(numbers)
+    mean = (sum(numbers))/(len(numbers))
+    median_r = median(numbers)
+
+    print("Minimum =", minimum)
+    print("Maximum =", maximum)
+    print("Mean =", mean)
+    print("Median =", median_r)
+
+except:
+    sys.exit("Error: no numbers provided")
