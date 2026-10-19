@@ -1,14 +1,21 @@
 """
 Portfolio Task - Week 1
 By submitting this code you are declaring that all work in this file, other than any provided template code, was written and developed by you independently.
-Name: 
+Name: Caleb Cooke
 """
+
+import sys
 
 name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
-amount = input.int("How much do you want to save every month? :")
-end_year =amount * 12
-print("The amount you will have saved by the end of the year is £" , end_year)
+amount = int(input("How much do you want to save every month? :"))
+try:
+    end_year = amount * 12
+    print(f"The amount you will have saved by the end of the year is £{end_year:.2f}")
+    with_interest = end_year*1.008
+    print(f"The total amount of money including interest will be £{with_interest:.2f}")
+except:
+    sys.exit("Invalid amount")
 
 
 # Ask the user to input an amount they want to save every month - this should be an integer.

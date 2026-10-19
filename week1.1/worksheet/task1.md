@@ -17,7 +17,7 @@ You can complete this task on the worksheet pdf if you prefer.
 |     cd -                    | Go back to previous directory
 |     mkdir directory_name    | Make a new directory with name directory_name
 |     touch filename          | Name new file with name filename
-|     git status              | 
+|     git status              | Shows the current state of your git working directory
 |     git add -A              | Stages changes, -A means all
 |     git commit -m ""        | Commits changes, -m is the title of the changes
 |     git push                | 'Pushes' changes back into the GitHub server
