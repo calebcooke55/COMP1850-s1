@@ -8,16 +8,32 @@ import time
 import sys
 systime = 0
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
+time = 0
 
-while True:
-    time.sleep(1)
-    systime = systime + 1
-    print(systime)
-    
 maxtime = int(input())  # read an integer number of steps (>0)
-state = "red"
 
-print(f"Time {systime:03} State {state}")
+time = 1
+while time <= maxtime:
+    if systime <=15:
+            if systime <= 3:
+                print(f"Time {time:03} State red")
+            elif systime <=6:
+                print(f"Time {time:03} State red_amber")
+            elif systime <= 11:
+                print(f"Time {time:03} State green")
+            elif systime <= 14:
+                print(f"Time {time:03} State amber")
+            time = time + 1
+            systime = systime + 1
+    else:
+        time = systime
+        systime = 0
+
+
+
+
+
+
 
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
