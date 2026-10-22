@@ -8,20 +8,21 @@ systime = 0
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
 maxtime = int(input())  # read an integer number of steps (>0)
-systime = 1
+
+systime = systime + 1
 
 while systime <= maxtime:
     if time <=15:
-            if time <= 3:
+            if time < 4:
                 state = "red"
                 print(f"Time {systime:03} State {state}")
-            elif time <=6:
+            elif time < 7:
                 state = "red_amber"
                 print(f"Time {systime:03} State {state}")
-            elif time <= 11:
+            elif time < 12:
                 state = "green"
                 print(f"Time {systime:03} State {state}")
-            elif time <= 14:
+            elif time < 15:
                 state = "amber"
                 print(f"Time {systime:03} State {state}")
             systime = systime + 1
