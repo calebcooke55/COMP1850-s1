@@ -21,7 +21,7 @@ while systime <= maxtime:
             elif time < 12:
                 state = "green"
                 print(f"Time {systime:03} State {state}")
-            elif time < 15:
+            elif time <= 15:
                 state = "amber"
                 print(f"Time {systime:03} State {state}")
             systime = systime + 1
