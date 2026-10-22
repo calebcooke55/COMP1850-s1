@@ -9,7 +9,6 @@ states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
 maxtime = int(input())  # read an integer number of steps (>0)
 
-systime = systime + 1
 
 while systime <= maxtime:
     if time <=15:
