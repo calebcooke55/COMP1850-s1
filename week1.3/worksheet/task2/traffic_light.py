@@ -7,11 +7,13 @@ time = 0
 systime = 0
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
-maxtime = int(input())  # read an integer number of steps (>0)
-
+try:
+    maxtime = int(input("Please enter an integer number of steps:"))  # read an integer number of steps (>0)
+except TypeError:
+    print("Invalid input")
 
 while systime <= maxtime:
-    if time <=15:
+    if time <15:
             if time < 4:
                 state = "red"
                 print(f"Time {systime:03} State {state}")
@@ -29,6 +31,7 @@ while systime <= maxtime:
     else:
         systime = time
         time = 0
+sys.exit()
 
 # Simulate the traffic light system up to systime=maxtime in 1-second steps
 
