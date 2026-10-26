@@ -19,3 +19,7 @@ class Point:
 p = Point(1.5, 2.0)
 print(p.x)
 print(p.y)
+
+#Error means it is fed one extra arument on top of what was
+#given because the self parameter was not defined
+#Didn't include self as a parameter
