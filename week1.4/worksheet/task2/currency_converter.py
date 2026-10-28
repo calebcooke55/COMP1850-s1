@@ -20,22 +20,22 @@ def currency_converter(amount, from_currency, to_currency):
         }
 
         for key_1 in conversion_rate:
-            if key_1 == user_from:
+            if key_1 == from_currency:
                 stored_from = key_1
         stored_rates = conversion_rate.get(stored_from)
         for key_2 in stored_rates:
-            if key_2 == user_to:
+            if key_2 == to_currency:
                 stored_to = key_2
         stored_rate = float(stored_rates.get(stored_to))
-        final_conversion = user_amount * stored_rate
+        final_conversion = amount * stored_rate
 
         return final_conversion
 
-user_from = input()
-user_to = input()
-user_amount = float(input())
+# user_from = input()
+# user_to = input()
+# user_amount = float(input())
 
-print(currency_converter(user_amount, user_from, user_to))
+# print(currency_converter(user_amount, user_from, user_to))
 
 
 
