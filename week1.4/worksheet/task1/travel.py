@@ -11,3 +11,10 @@ def calculate_travel_distance(tank_capacity, km_per_litre):
     f_kml = float(km_per_litre) 
     distance = round(f_capacity * f_kml, 2) 
     return distance 
+
+print(calculate_travel_distance(30.2, km_per_litre=3.3))
+
+#a. It will work, as the function converts any input data type to a float
+#b.i. No, as it cannot convert the enture thing into a float
+#b.ii. Yes, as the value is already a float so does not need to be converted
+#      into a float
