@@ -31,9 +31,9 @@ def currency_converter(amount, from_currency, to_currency):
 
         return final_conversion
 
-user_from = input("Please enter the currency code of the currency you are converting from:")
-user_to = input("Please enter the currency code of the currency you are coverting to:")
-user_amount = float(input("Please enter the monetary value to be converted:"))
+user_from = input()
+user_to = input()
+user_amount = float(input())
 
 print(currency_converter(user_amount, user_from, user_to))
 
