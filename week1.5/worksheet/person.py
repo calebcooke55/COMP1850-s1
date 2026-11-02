@@ -10,18 +10,15 @@ class Person:
         """
         Creates a profile for a person, storing their name and birth
         """
-        try:
-            if not isinstance (name, str):
-                raise TypeError("Name must be a string")
-            if not isinstance (birth, date):
-                raise TypeError("Birthday must be a date")
-            if name == "":
-                raise ValueError("Name cannot be an empty string")
-            self.name = name
-            self.birth = birth
-        except:
+        if not isinstance (name, str):
+            raise TypeError("Name must be a string")
+        if not isinstance (birth, date):
+            raise TypeError("Birthday must be a date")
+        if name == "":
             raise ValueError("Name cannot be an empty string")
-
+        self.name = name
+        self.birth = birth
+        
     def initials(self):
         """
         Identifies the person's initials based on their given name
@@ -35,5 +32,5 @@ class Person:
         Decides if the person's birthday is today or not, returns a
         boolean value
         """
-        today = date.datetime.today()
+        today = date.today()
         return today == self.birth
