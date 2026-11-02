@@ -9,13 +9,17 @@ class Rectangle:
         Creates a Rectangle, given values for width and height.
         """
 
-        if not isinstance ((width, height), (int, float)):
-            raise TypeError("Width and height must be a number")
-        elif width <= 0 and height <= 0:
+        if not isinstance (width, (int, float)):
+            raise TypeError("Width must be a number")
+        
+        if not isinstance (height, (int, float)):
+            raise TypeError("Height must be a number")
+        
+        if width <= 0 or height <= 0:
             raise ValueError("Width and height must be more than 0")
-        else:
-            self.width = width
-            self.height = height
+    
+        self.width = width
+        self.height = height
 
     def is_square(self):
        """
@@ -23,7 +27,7 @@ class Rectangle:
        given the values for height and width
        """
        return self.height == self.width
-
+    
     def area(self):
         """
         Returns the area of the rectangle given the values for height

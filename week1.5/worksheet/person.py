@@ -24,10 +24,9 @@ class Person:
         """
         Identifies the person's initials based on their given name
         """
-        initial=[]
-        for i in self.name:
-            if self.name(i) - 1 == " ":
-                initial.append(self.name(i))
+        name_list = self.name.split()
+        initial = ''.join([x[0].upper() for x in self.name.split(' ')])
+
             
     def is_birthday(self):
         """
@@ -43,3 +42,4 @@ class Person:
 
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
+
