@@ -33,6 +33,15 @@ class QuakeDataset:
 
         The new data replaces any existing data.
         """
+        self.data.clear()
+        for info in self.feed.reader():
+            time = datetime.fromisoformat(info['time'])
+            lon = float(info['longitude'])
+            lat = float(info['latitude'])
+            depth = float(info['depth'])
+            mag = float(info['mag'])
+            self.data.append(Quake(time, lon, lat, depth, mag))
+
         # Write code here to replace existing data with new earthquake data.
         # Use the value returned by the feed's reader() method as the
         # subject of a for loop.
@@ -52,8 +61,7 @@ class QuakeDataset:
         """
         Returns information on this dataset as a string.
         """
-        # Write code here to create and return a string representation
-        # (Include number of quakes and details of the feed that was used)
+        return f"{feed}"
 
     def mean_depth(self):
         """
@@ -69,8 +77,10 @@ class QuakeDataset:
         """
         Returns the mean magnitude of the quakes in this dataset.
         """
-        # Write code here that computes the mean magnitude of all the
-        # quakes currently in the dataset
+        if len(self.data) == 0:
+            raise QuakeDatasetError("dataset is empty")
+        allmag = sum(quake.magnitude for quake in self.data)
+        return allmag / len(self.data)
 
     def shallowest_quake(self):
         """
