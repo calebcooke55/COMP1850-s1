@@ -15,6 +15,8 @@ class Person:
                 raise TypeError("Name must be a string")
             if not isinstance (birth, date):
                 raise TypeError("Birthday must be a date")
+            if name == "":
+                raise ValueError("Name cannot be an empty string")
             self.name = name
             self.birth = birth
         except:
@@ -24,8 +26,8 @@ class Person:
         """
         Identifies the person's initials based on their given name
         """
-        name_list = self.name.split()
         initial = ''.join([x[0].upper() for x in self.name.split(' ')])
+        return initial
 
             
     def is_birthday(self):
@@ -33,13 +35,5 @@ class Person:
         Decides if the person's birthday is today or not, returns a
         boolean value
         """
-        today = date.today()
+        today = date.datetime.today()
         return today == self.birth
-
-
-    # Write a constructor here to create and initialize name and
-    # birth fields (see README.md for further details)
-
-    # Implement methods initials() and is_birthday() here
-    # (see README.md for further details)
-
