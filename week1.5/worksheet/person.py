@@ -1,5 +1,6 @@
 # Worksheet 1.5: Person class
 
+import datetime
 from datetime import date
 
 class Person:
@@ -32,8 +33,5 @@ class Person:
         Decides if the person's birthday is today or not, returns a
         boolean value
         """
-        today = date(today())
-        if today == date(self.birth):
-            return True
-        else:
-            return False
+        today_1 = datetime.datetime.now()
+        return today_1 == self.birth
