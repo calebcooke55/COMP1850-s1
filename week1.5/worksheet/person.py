@@ -33,7 +33,7 @@ class Person:
         boolean value
         """
         today = date(today())
-        if today == self.birth:
+        if today == date(self.birth):
             return True
         else:
             return False
