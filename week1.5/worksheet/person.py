@@ -32,7 +32,7 @@ class Person:
         Decides if the person's birthday is today or not, returns a
         boolean value
         """
-        today = date.today()
+        today = date(today())
         if today == self.birth:
             return True
         else:
