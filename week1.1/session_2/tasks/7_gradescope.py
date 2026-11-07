@@ -14,3 +14,13 @@
 
 # Download your file, and upload it to the 'Week 1 Session 2 - Practice Upload' task on Minerva.
 # You will get some feedback - ensure you are passing the tests!
+
+import sys
+
+try:
+    number1 = int(input("Please enter number 1"))
+    number2 = int(input("Please enter number 2"))
+except:
+    sys.exit("That is not a number")
+
+print(number1 * number2)
