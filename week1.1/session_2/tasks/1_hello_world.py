@@ -1,4 +1,5 @@
-# a basic Hello World program - write your code under this line
+
+#A program that conducts a simple 'conversation' with the user
 
 name = input("What's your name?")
 if name == "Caleb":

@@ -1,4 +1,4 @@
-# Work out the answers to the three maths problems:
+#A program that prints the solutions to three simple maths problems
 
 # 1: (4 x 8) x 6
 print((4*8)*6)

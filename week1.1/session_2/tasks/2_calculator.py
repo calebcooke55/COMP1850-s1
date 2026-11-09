@@ -1,4 +1,5 @@
-# Fill out the code to make a very simple calculator
+
+#A program that takes 2 numbers and adds them together
 
 # ask the user to enter number1:
 number1 = int(input("Please enter one number"))

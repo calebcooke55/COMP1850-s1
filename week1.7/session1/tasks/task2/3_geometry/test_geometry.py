@@ -12,11 +12,10 @@ def test_point_distance():
     assert Point(6, 8).distance() == 10.0
     
 def test_point_distance_to():
-    p1 = Point(0, 0)
-    p2 = Point(3, 4)
-    
-    # complete the implementation for
-    # testing distance_to()
+    p1 = Point(0, 0).distance_to(Point(0, 0), Point(1,0))
+    p2 = Point(3, 4).distance_to(Point(3, 4), Point(3,5))
+    assert p1 == 1
+    assert p2 == 1
     
 
 # Write test functions to test the __init__(), 

@@ -4,6 +4,8 @@ By submitting this code you are declaring that all work in this file, other than
 Name: Caleb Cooke
 """
 
+#A programme that calculates the amount of money they will have after interest, after storing their money in a bank for a year
+
 import sys
 
 name = input("What is your name? ")
